@@ -1,5 +1,10 @@
 package es.carlosrdrz.algorithms.chapter1.part1;
 
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise23 {
@@ -18,17 +23,18 @@ public class Exercise23 {
     }
 
     public static void main(String[] args) {
-        int whitelist[] = { 1, 4, 7, 22, 46, 89 };
-        Scanner sc = new Scanner(System.in);
+        In in = new In(args[0]);
+        int[] whitelist = in.readAllInts();
+        Arrays.sort(whitelist);
 
-        while (sc.hasNext()) {
-            int intFromStdin = sc.nextInt();
-            int whitelistIndex = indexOf(whitelist, intFromStdin);
+        while (!StdIn.isEmpty()) {
+            int key = StdIn.readInt();
+            int indexResult = indexOf(whitelist, key);
 
             if (args[0].compareTo("+") == 0) {
-                if (whitelistIndex == -1) System.out.println("Not in the whitelist: " + intFromStdin);
+                if (indexResult == -1) System.out.println("Not in the whitelist: " + key);
             } else if (args[0].compareTo("-") == 0) {
-                if (whitelistIndex != -1) System.out.println("In the whitelist: " + intFromStdin);
+                if (indexResult != -1) System.out.println("In the whitelist: " + key);
             }
         }
     }

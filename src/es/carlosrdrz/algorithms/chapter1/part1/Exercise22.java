@@ -1,5 +1,11 @@
 package es.carlosrdrz.algorithms.chapter1.part1;
 
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
+import java.util.Arrays;
+
 public class Exercise22 {
     private static int indexOf(int [] a, int key) {
         return indexOf(a, key, 0, a.length - 1, 0);
@@ -16,7 +22,14 @@ public class Exercise22 {
     }
 
     public static void main(String[] args) {
-        int test[] = { 1, 4, 7, 22, 46, 89 };
-        System.out.println("Result: " + indexOf(test, 90));
+        In in = new In(args[0]);
+        int[] whitelist = in.readAllInts();
+        Arrays.sort(whitelist);
+
+        while (!StdIn.isEmpty()) {
+            int key = StdIn.readInt();
+            if (indexOf(whitelist, key) == -1)
+                StdOut.println(key);
+        }
     }
 }
