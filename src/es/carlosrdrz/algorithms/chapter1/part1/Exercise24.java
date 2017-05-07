@@ -1,7 +1,7 @@
 package es.carlosrdrz.algorithms.chapter1.part1;
 
 public class Exercise24 {
-    private static int gcd(int p, int q) {
+    public static int gcd(int p, int q) {
         System.out.println(p + " " + q);
         if (q == 0) return p;
         int r = p % q;

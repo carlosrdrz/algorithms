@@ -1,7 +1,7 @@
 package es.carlosrdrz.algorithms.chapter1.part1;
 
 public class Exercise19 {
-    private static long fibonacci(int n) {
+    public static long fibonacci(int n) {
         if (n == 0) return 0;
         if (n == 1) return 1;
         return fibonacci(n - 1) + fibonacci(n - 2);
@@ -16,7 +16,7 @@ public class Exercise19 {
         return result;
     }
 
-    private static long newFibonacci(int n) {
+    public static long newFibonacci(int n) {
         long[] cachedResults = new long[n + 1];
         return cachedFibonacci(n, cachedResults);
     }

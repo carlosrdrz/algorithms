@@ -9,7 +9,7 @@ package es.carlosrdrz.algorithms.chapter1.part1;
 */
 
 public class Exercise16 {
-    private static String exR1(int n) {
+    public static String exR1(int n) {
         if (n <= 0) return "";
         return exR1(n - 3) + n + exR1(n - 2) + n;
     }

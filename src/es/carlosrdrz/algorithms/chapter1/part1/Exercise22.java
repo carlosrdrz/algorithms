@@ -7,11 +7,11 @@ import edu.princeton.cs.algs4.StdOut;
 import java.util.Arrays;
 
 public class Exercise22 {
-    private static int indexOf(int [] a, int key) {
+    public static int indexOf(int [] a, int key) {
         return indexOf(a, key, 0, a.length - 1, 0);
     }
 
-    private static int indexOf(int[] a, int key, int lo, int hi, int depth) {
+    public static int indexOf(int[] a, int key, int lo, int hi, int depth) {
         for (int i = 0; i < depth; i++) System.out.print("\t");
         System.out.println(lo + " " + hi);
         if (lo > hi) return -1;
