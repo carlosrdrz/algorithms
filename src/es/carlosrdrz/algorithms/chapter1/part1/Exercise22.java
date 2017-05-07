@@ -1,4 +1,4 @@
-package exercises.chapter1.part1;
+package es.carlosrdrz.algorithms.chapter1.part1;
 
 public class Exercise22 {
     private static int indexOf(int [] a, int key) {

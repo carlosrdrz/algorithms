@@ -31,7 +31,7 @@ The principle behind this is that counting 10 6 times is the same thing than cou
 When the second number (6 and 3 in the example above) is odd and you are using integers, it gets
 rounded down, so you need to adjust for it by counting "a" again.
 
-I'm guessing the second part of the exercise is the same thing but with exponentials.
+I'm guessing the second part of the exercise is the same thing but with exponents.
 
 ```
 mystery(2, 25) = mystery(4, 12) * 2 = mystery(16, 6) * 2 = mystery(256, 3) * 2 = mystery(65536, 1) * 256 * 2

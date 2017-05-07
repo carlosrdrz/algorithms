@@ -1,4 +1,4 @@
-package exercises.chapter1.part1;
+package es.carlosrdrz.algorithms.chapter1.part1;
 
 public class Exercise19 {
     private static long fibonacci(int n) {
