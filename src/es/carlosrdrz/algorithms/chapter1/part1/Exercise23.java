@@ -7,16 +7,14 @@ import java.util.Arrays;
 
 public class Exercise23 {
     public static int indexOf(int [] a, int key) {
-        return indexOf(a, key, 0, a.length - 1, 0);
+        return indexOf(a, key, 0, a.length - 1);
     }
 
-    public static int indexOf(int[] a, int key, int lo, int hi, int depth) {
-        for (int i = 0; i < depth; i++) System.out.print("\t");
-        System.out.println(lo + " " + hi);
+    public static int indexOf(int[] a, int key, int lo, int hi) {
         if (lo > hi) return -1;
         int mid = lo + (hi - lo) / 2;
-        if (key > a[mid]) return indexOf(a, key, mid + 1, hi, depth + 1);
-        else if (key < a[mid]) return indexOf(a, key, lo, mid - 1, depth + 1);
+        if (key > a[mid]) return indexOf(a, key, mid + 1, hi);
+        else if (key < a[mid]) return indexOf(a, key, lo, mid - 1);
         else return mid;
     }
 
